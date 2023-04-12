@@ -3,7 +3,7 @@
 ::QQ群: 6281379
 ::TG群: https://t.me/nat_ee
 ::批处理: 荣耀&制作 QQ:1800619
-::国内仓库: https://gitee.com/yyingc/bash
+::国内仓库: https://yyingc.coding.net/public/i/bash/git/files
 ::国外仓库: https://github.com/yyingc/bash
 setlocal enabledelayedexpansion
 REG QUERY "HKU\S-1-5-19" 1>NUL 2>NUL
