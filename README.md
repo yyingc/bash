@@ -9,3 +9,6 @@ https://curl.se/windows/
 
 # Aria2
 https://aria2.github.io/
+
+# Nssm
+https://nssm.cc/
