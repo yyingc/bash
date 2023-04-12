@@ -1,27 +1,27 @@
 @ECHO OFF
-::мЬж╥: nat.ee
-::QQх╨: 6281379
-::TGх╨: https://t.me/nat_ee
-::еЗ╢╕юМ: хыр╚&жфвВ QQ:1800619
-::╧Здз╡ж©Б: https://gitee.com/yyingc/bash
-::╧ЗмБ╡ж©Б: https://github.com/yyingc/bash
+::Г╫▒Е²─: nat.ee
+::QQГ╬╓: 6281379
+::TGГ╬╓: https://t.me/nat_ee
+::Ф┴╧Е╓└Г░├: Х█ёХ──&Е┬╤Д╫° QQ:1800619
+::Е⌡╫Е├┘Д╩⌠Е╨⌠: https://gitee.com/yyingc/bash
+::Е⌡╫Е╓√Д╩⌠Е╨⌠: https://github.com/yyingc/bash
 setlocal enabledelayedexpansion
 REG QUERY "HKU\S-1-5-19" 1>NUL 2>NUL
 IF %ERRORLEVEL% GTR 0 ((
 ECHO SET UAC = CreateObject^("Shell.Application"^)
 ECHO UAC.ShellExecute "%~f0", "%1", "", "runas", 1
 )>"%TEMP%\GetAdmin.vbs"
-ECHO рт╧эюМт╠иМ╥щткпп
+ECHO Д╩╔Г╝║Г░├Е▒≤Х╨╚Д╩╫Х©░Х║▄
 CSCRIPT //Nologo "%TEMP%\GetAdmin.vbs"
 DEL /F /Q "%TEMP%\GetAdmin.vbs" 1>NUL 2>NUL
 EXIT /B)
 IF NOT EXIST "%SystemRoot%\System32\certutil.exe" (
-title ╢МнС
-ECHO ╢МнС: 
-ECHO о╣мЁ╡╩╢Фтз certutil.exe нд╪Ч
-ECHO нч╥╗обтьеЗ╢╕юМтЖг©рюю╣╩╥╬Ё║╜║╜
+title И■≥Х╞╞
+ECHO И■≥Х╞╞: 
+ECHO ГЁ╩Г╩÷Д╦█Е╜≤Е°╗ certutil.exe Ф√┤Д╩╤
+ECHO Ф≈═ФЁ∙Д╦▀Х╫╫Ф┴╧Е╓└Г░├Е╒·Е╪╨Е┼÷Х┐╫Г▌╞Е╒┐Б─╕Б─╕
 ECHO.
-ECHO ╟╢хнрБ╪ЭмкЁЖ║╜║╜
+ECHO Ф▄┴Д╩╩Ф└▐И■╝И──Е┤╨Б─╕Б─╕
 PAUSE >NUL
 EXIT
 )
@@ -37,14 +37,14 @@ SET "buybox=%~dp0\bin\%ar%\busybox.exe"
 
 :down_busybox
 IF NOT EXIST "%buybox%" (
-ECHO BusyBox уЩтзобть
+ECHO BusyBox Ф╜ёЕ°╗Д╦▀Х╫╫
 certutil -urlcache -split -f "%down%%url_busybox%" delete 1>NUL 2>NUL
 certutil -urlcache -split -f "%down%%url_busybox%" "%buybox%" 1>NUL 2>NUL
 certutil -urlcache -split -f "%down%%url_busybox%" delete 1>NUL 2>NUL
 IF EXIST "%buybox%" (
-ECHO BusyBox обтьЁи╧╕
+ECHO BusyBox Д╦▀Х╫╫Ф┬░Е┼÷
 ) ELSE (
-ECHO BusyBox обтьй╖╟э
+ECHO BusyBox Д╦▀Х╫╫Е╓╠Х╢╔
 )
 )
 
@@ -52,12 +52,12 @@ ECHO BusyBox обтьй╖╟э
 IF EXIST "%buybox%" (
 IF NOT EXIST "%~dp0\bin\%ar%\aria2c.exe" (
 ECHO.
-ECHO Aria2 уЩтзобть 
+ECHO Aria2 Ф╜ёЕ°╗Д╦▀Х╫╫ 
 %buybox% wget -q --no-check-certificate "%down%%url_aria2%" -O "%~dp0\bin\%ar%\aria2c.exe"
 IF EXIST "%~dp0\bin\%ar%\aria2c.exe" (
-ECHO Aria2 обтьЁи╧╕
+ECHO Aria2 Д╦▀Х╫╫Ф┬░Е┼÷
 ) ELSE (
-ECHO Aria2 обтьй╖╟э
+ECHO Aria2 Д╦▀Х╫╫Е╓╠Х╢╔
 )
 )
 )
@@ -66,20 +66,20 @@ ECHO Aria2 обтьй╖╟э
 IF EXIST "%buybox%" (
 IF NOT EXIST "%~dp0\bin\%ar%\curl.exe" (
 ECHO.
-ECHO Curl уЩтзобть 
+ECHO Curl Ф╜ёЕ°╗Д╦▀Х╫╫ 
 %buybox% wget -q --no-check-certificate "%down%%url_curl%" -O "%~dp0\bin\%ar%\curl.zip"
 IF EXIST "%~dp0\bin\%ar%\curl.zip" (
-ECHO Curl обтьЁи╧╕
-ECHO Curl нд╪Ч╫Бя╧
+ECHO Curl Д╦▀Х╫╫Ф┬░Е┼÷
+ECHO Curl Ф√┤Д╩╤Х╖ёЕ▌▀
 %buybox% unzip -oq "%~dp0\bin\%ar%\curl.zip" -d "%~dp0\bin\%ar%"
 IF EXIST "%~dp0\bin\%ar%\curl.exe" (
-ECHO Curl ╫Бя╧Ёи╧╕
+ECHO Curl Х╖ёЕ▌▀Ф┬░Е┼÷
 ) ELSE (
-ECHO Curl ╫Бя╧й╖╟э
+ECHO Curl Х╖ёЕ▌▀Е╓╠Х╢╔
 )
 DEL /f /q /a "%~dp0\bin\%ar%\curl.zip" 1>NUL 2>NUL
 ) ELSE (
-ECHO Curl обтьй╖╟э
+ECHO Curl Д╦▀Х╫╫Е╓╠Х╢╔
 )
 )
 )
